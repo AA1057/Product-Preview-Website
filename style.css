@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cream: #F2EAE2;
+    --gunmetal: #1C232B;
+    --aurometal-saurus: #6C7289;
+    --deep-aquamarine: #3D8168;
+    --pure-white: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 91.5%;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+.perfume {
+    color: var(--aurometal-saurus);
+    text-transform: uppercase;
+    letter-spacing: 0.3125rem;
+    padding: 1.5rem 0 0.75rem 0;
+    font-size: 0.75rem;
+}
+
+.container {
+    background: var(--pure-white);
+    border-radius: 10px;
+}
+
+.container>*:not(.image) {
+    width: 86%;
+    margin: 0 auto;
+}
+
+.image {
+    border-radius: 10px 10px 0 0;
+}
+
+.main-heading {
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    padding-bottom: 1rem;
+}
+
+.perfume-desc {
+    line-height: 1.5;
+    color: var(--aurometal-saurus);
+    font-size: .875rem;
+    padding-bottom: 1.5rem;
+}
+
+.product-price {
+    display: flex;
+    gap: 1.1875rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.sale-price {
+    color: var(--deep-aquamarine);
+}
+
+.main-price {
+    font-family: "Montserrat", sans-serif;
+    font-size: .8125rem;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.product-price .perfume-desc {
+    padding: 0;
+}
+
+.product-price .main-heading {
+    padding: 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    border: 0;
+    background: var(--deep-aquamarine);
+    color: var(--pure-white);
+    font-weight: 700;
+    border-radius: 0.5em;
+    padding: 1em;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.btn[data-icon="shopping-cart"]::before {
+    content: "";
+    background-image: url(images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
