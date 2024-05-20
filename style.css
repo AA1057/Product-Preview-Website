@@ -6,6 +6,7 @@
     --aurometal-saurus: #6C7289;
     --deep-aquamarine: #3D8168;
     --pure-white: #FFFFFF;
+    --deep-aquamarine-hover: #1A4032;
 }
 
 *,
@@ -48,11 +49,13 @@ video {
 }
 
 .container {
+    display: grid;
     background: var(--pure-white);
     border-radius: 10px;
+    max-width: 600px;
 }
 
-.container>*:not(.image) {
+.container>*:not(.image-picture) {
     width: 86%;
     margin: 0 auto;
 }
@@ -124,4 +127,47 @@ video {
     background-image: url(images/icon-cart.svg);
     width: 15px;
     height: 16px;
+}
+
+.btn:hover {
+    background: var(--deep-aquamarine-hover);
+}
+
+@media (min-width:600px) {
+    .container {
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .perfume {
+        padding-top: 2rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .main-heading {
+        padding-bottom: 1.5rem;
+    }
+
+    .perfume-desc {
+        padding-bottom: 1.8125rem;
+        line-height: 1.4375rem;
+    }
+
+    .product-price {
+        padding-bottom: 0.5rem;
+    }
+
+    .imaage {
+        width: 100%;
+    }
+
+    .container>*:not(.image-picture) {
+        width: 79%;
+        margin: 0 auto;
+    }
+
+    .image {
+        border-radius: 10px 0 0 10px;
+    }
+
 }
