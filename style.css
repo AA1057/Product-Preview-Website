@@ -157,10 +157,6 @@ video {
         padding-bottom: 0.5rem;
     }
 
-    .imaage {
-        width: 100%;
-    }
-
     .container>*:not(.image-picture) {
         width: 79%;
         margin: 0 auto;
@@ -168,6 +164,8 @@ video {
 
     .image {
         border-radius: 10px 0 0 10px;
+        height: 100%;
+        object-fit: cover;
     }
 
 }
